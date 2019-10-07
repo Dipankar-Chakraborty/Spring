@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.zensar.spring.performers.Performer;
+import com.zensar.spring.performers.PoeticJuggler;
 
 public class ZensarIdolMain {
 
@@ -12,6 +13,8 @@ public class ZensarIdolMain {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("performers.xml");
 		Performer p = ctx.getBean("pyare mohan", Performer.class);
 		p.perform();
+		Performer p1 = ctx.getBean("katrina kaif", PoeticJuggler.class);
+		p1.perform();
 	}
 
 }
