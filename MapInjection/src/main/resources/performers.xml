@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<bean id="guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+	<bean id="piano" class="com.zensar.spring.instruments.Piano"></bean>
+	<bean id="violin" class="com.zensar.spring.instruments.Violin"></bean>
+	<bean id="Jack Ryde"
+		class="com.zensar.spring.performers.Instrumentalist">
+		<property name="instrumentSongMap">
+			<map>
+				<entry key-ref="guitar" value="Give me some sunshine"></entry>
+				<entry key-ref="piano" value="See You Again"></entry>
+				<entry key-ref="violin" value="Jeena Jeena"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>
